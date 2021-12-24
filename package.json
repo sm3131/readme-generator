@@ -1,0 +1,25 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "This application generates a professional readme file based on user input collected in the node runtime environment via the command line",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sm3131/readme-generator.git"
+  },
+  "keywords": [
+    "readme-generator"
+  ],
+  "author": "Sammi Moore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sm3131/readme-generator/issues"
+  },
+  "homepage": "https://github.com/sm3131/readme-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
