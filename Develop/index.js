@@ -3,6 +3,9 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const markdown = require('./utils/generateMarkdown.js');
 
+const d = new Date();
+const currentYear = d.getFullYear();
+
 // TODO: Create an array of questions for user input
 const questions = () => {
     return inquirer.prompt([
@@ -89,11 +92,14 @@ const questions = () => {
 ])
 };
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
+questions()
+.then(readmeData => {
+    console.log(readmeData);
+    return markdown(readmeData);
+})
+.then(readmeMD => {
+    fs.writeFile('README.md', readmeMD, err => {
+        if(err) throw err;
+        console.log('README.md file created!')
+    })
+})
