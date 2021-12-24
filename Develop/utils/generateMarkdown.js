@@ -98,11 +98,49 @@ function renderLicenseSection(license, year, copyRight, program) {
   }
 }
 
-
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+function generateMarkdown(readmeData) {
+  return `
+  # ${readmeData.title}
 
+  ${renderLicenseBadge(readmeData.license)}${renderLicenseLink(readmeData.license)}
+
+  ## Description
+  ${readmeData.description}
+
+  ## Table of Contents
+
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
+  * [Credits](#credits)
+
+  ## Installation
+  ${readmeData.installation}
+
+  ## Usage
+  ${readmeData.usage}
+
+  ## License
+  ${renderLicenseSection(readmeData.license, readmeData.copyrightYear, readmeData.licenseName, readmeData.title)}
+
+  ## Contributing
+  ${readmeData.contribution}
+
+  ## Tests
+  ${readmeData.tests}
+
+  ## Questions
+
+  If you would like to access this project's repository as well as other projects in GitHub, click this [GitHub](https://github.com/${readmeData.github}) link.
+
+  For all other questions or inquires please feel free to contact me via email at [${readmeData.email}](link)
+
+  ## Credits
+  ${readmeData.credit}
 `;
 }
 
