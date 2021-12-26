@@ -98,6 +98,8 @@ function renderLicenseSection(license, year, copyRight, program) {
   }
 }
 
+const builtTools = tools => tools.join('\n  ');
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(readmeData) {
   return `
@@ -109,7 +111,7 @@ function generateMarkdown(readmeData) {
   ${readmeData.description}
 
   ## Table of Contents
-
+  * [Built With](#built-with)
   * [Installation](#installation)
   * [Usage](#usage)
   * [License](#license)
@@ -117,6 +119,9 @@ function generateMarkdown(readmeData) {
   * [Tests](#tests)
   * [Questions](#questions)
   * [Credits](#credits)
+
+  ## Built With
+  ${builtTools(readmeData.tools)}
 
   ## Installation
   ${readmeData.installation}
@@ -137,7 +142,7 @@ function generateMarkdown(readmeData) {
 
   If you would like to access this project's repository as well as other projects in GitHub, click this [GitHub](https://github.com/${readmeData.github}) link.
 
-  For all other questions or inquires please feel free to contact me via email at [${readmeData.email}](link)
+  For all other questions or inquires please feel free to contact me via email at [${readmeData.email}](mailto:${readmeData.email})
 
   ## Credits
   ${readmeData.credit}

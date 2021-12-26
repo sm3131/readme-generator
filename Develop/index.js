@@ -20,6 +20,14 @@ const questions = () => {
         message:'Please provide a description for your project.'
     },
     {
+        type:'checkbox',
+        name:'tools',
+        message:'Select all of the tools you used to create your project from the list below. \nIf you cannot find a tool you used, feel free to press enter to select the default of "other" or include "other" in your choice options, so you can change and edit the list in the readme file after it is created.\n',
+        choices: ['- HTML', '- CSS', '- JS', '- JQuery', '- Node.js', '- React', '- Express', '- Python', '- C++', '- Other'],
+        default: '- Other'
+        
+    },
+    {
         type:'input',
         name:'installation',
         message:'Please provide the installation instructions for your project.'
