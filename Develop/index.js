@@ -35,8 +35,7 @@ const questions = () => {
     {
         type:'input',
         name:'usage',
-        message:'Describe how to use this application, include all details you would like users to know.',
-        // default:'none'
+        message:'Describe how to use this application, include all details you would like users to know.'
     },
     {
         type:'confirm',
@@ -72,8 +71,7 @@ const questions = () => {
     {
         type:'input',
         name:'contribution',
-        message:'Provide instructions to explain to users or fellow programmers how they can contribute to this project. Be sure to include specific instructions about proper ways to contribute to the project.',
-        // default:'none'
+        message:'Provide instructions to explain to users or fellow programmers how they can contribute to this project. Be sure to include specific instructions about proper ways to contribute to the project.'
     },
     {
         type:'input',
@@ -94,8 +92,7 @@ const questions = () => {
     {
         type:'input',
         name:'credit',
-        message:'If there are aspects of the project that required the use of outside sources, please include them here. List all the sources and information necessary to accurately credit the people, organizations, companies, and resources involved in the development of this project.',
-        // default:'none'
+        message:'If there are aspects of the project that required the use of outside sources, please include them here. List all the sources and information necessary to accurately credit the people, organizations, companies, and resources involved in the development of this project.'
     }
 ])
 };
@@ -106,8 +103,8 @@ questions()
     return markdown(readmeData);
 })
 .then(readmeMD => {
-    fs.writeFile('README.md', readmeMD, err => {
+    fs.writeFile('NEW_README.md', readmeMD, err => {
         if(err) throw err;
-        console.log('README.md file created!')
+        console.log('NEW_README.md file created!')
     })
 })
