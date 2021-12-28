@@ -54,7 +54,7 @@ To use the readme generator application complete the following steps:
 6. Now go back to your code text editor and you should see that a new README file has been created. It should be properly formatted and contain all of the information you included throughout the user prompts.
 7. You can now use this README file for your current or future coding projects. You are also able to edit, add, and make changes to the information in the README file as you see fit.
 
-**IMPORTANT NOTE:** Each time you run the program and fill out the user prompts you will overwrite the existing README file if one currently exists. Filling out the user prompts multiple times will not create multiple README files instead it will overwrite the existing README file. It is recommended that you copy and save the README you created before generating a new one, that way you will not lose any of your project README files generated with this program.
+**IMPORTANT NOTE:** Each time you run the program and fill out the user prompts you will overwrite the existing NEW_README.md file if one currently exists. Filling out the user prompts multiple times will not create multiple NEW_README.md files instead it will overwrite the existing NEW_README.md file. It is recommended that you copy and save the NEW_README.md file you created before generating a new one, that way you will not lose any of your project README files generated with this program.
 
 ## License
 
