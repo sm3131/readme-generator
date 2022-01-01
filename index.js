@@ -12,30 +12,60 @@ const questions = () => {
     {
         type:'input',
         name:'title',
-        message:'What is your project title?'
+        message:'What is your project title?',
+        validate: title => {
+            if (title) {
+              return true;
+            } else {
+              console.log('Please enter a title for your project!');
+              return false;
+            }
+        }
     },
     {
         type:'input',
         name:'description',
-        message:'Please provide a description for your project.'
+        message:'Please provide a description for your project.',
+        validate: description => {
+            if (description) {
+              return true;
+            } else {
+              console.log('Please enter a description for your project!');
+              return false;
+            }
+        }
     },
     {
         type:'checkbox',
         name:'tools',
-        message:'Select all of the tools you used to create your project from the list below. \nIf you cannot find a tool you used, feel free to press enter to select the default of "other" or include "other" in your choice options, so you can change and edit the list in the readme file after it is created.\n',
-        choices: ['- HTML', '- CSS', '- JS', '- JQuery', '- Node.js', '- React', '- Express', '- Python', '- C++', '- Other'],
-        default: '- Other'
-        
+        message:'Select all of the tools you used to create your project from the list below. \nIf you cannot find a tool you used, select "other", so you can change and add tools in the readme file after it is created.\n',
+        choices: ['- HTML', '- CSS', '- JS', '- JQuery', '- Node.js', '- React', '- Express', '- Python', '- C++', '- Other']
     },
     {
         type:'input',
         name:'installation',
-        message:'Please provide the installation instructions for your project.'
+        message:'Please provide the installation instructions for your project.',
+        validate: installation => {
+            if (installation) {
+              return true;
+            } else {
+              console.log('Please enter installation instructions for your project!');
+              return false;
+            }
+        }
     },
     {
         type:'input',
         name:'usage',
-        message:'Describe how to use this application, include all details you would like users to know.'
+        message:'Describe how to use this application.',
+        validate: usageInput => {
+            if (usageInput) {
+              return true;
+            } else {
+                console.log('Please describe how to use your application!');
+              return false;
+            }
+        }
     },
     {
         type:'confirm',
@@ -60,7 +90,7 @@ const questions = () => {
         type:'input',
         name:'licenseName',
         message:'Please enter the name of the copyright owner(s)/holder(s).',
-        default:'none'
+        default:''
     },
     {
         type:'input',
@@ -71,28 +101,60 @@ const questions = () => {
     {
         type:'input',
         name:'contribution',
-        message:'Provide instructions to explain to users or fellow programmers how they can contribute to this project. Be sure to include specific instructions about proper ways to contribute to the project.'
+        message:'Provide instructions for users explaining how they can contribute to this project.',
+        validate: contribution => {
+            if (contribution) {
+              return true;
+            } else {
+              console.log('Please describe how to contribute to your project, or explain why this project is not open to contributions!');
+              return false;
+            }
+        }
     },
     {
         type:'input',
         name:'tests',
         message:'If there are any tests that need to be run by users of this application please include instructions here.',
-        // default:'none'
+        default:'npm run test'
     },
     {
         type:'input',
         name:'github',
-        message:'Please enter your GitHub username.'
+        message:'Please enter your GitHub username.',
+        validate: github => {
+            if (github) {
+              return true;
+            } else {
+              console.log('Please enter your github username!');
+              return false;
+            }
+        }
     },
     {
         type:'input',
         name:'email',
-        message:'Please provide your email address for the questions section.'
+        message:'Please provide your email address for the questions section.',
+        validate: email => {
+            if (email) {
+              return true;
+            } else {
+              console.log('Please enter a valid email address!');
+              return false;
+            }
+        }
     },
     {
         type:'input',
         name:'credit',
-        message:'If there are aspects of the project that required the use of outside sources, please include them here. List all the sources and information necessary to accurately credit the people, organizations, companies, and resources involved in the development of this project.'
+        message:'Provide a list of credits that were used in the development of this project.',
+        validate: creditInput => {
+            if (creditInput) {
+              return true;
+            } else {
+              console.log('Please include credits for this project, or state that you created this project on your own!');
+              return false;
+            }
+        }
     }
 ])
 };
