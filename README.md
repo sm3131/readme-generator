@@ -37,12 +37,11 @@ Click on the link below to watch the Screencastify video that walks the user thr
 To install the README generator application complete the following steps:
 1. Clone the application's code from this [GitHub](https://github.com/sm3131/readme-generator) repository onto your local machine into a new directory (e.g. readme-generator).
 2. Open the command line and navigate to the directory you cloned this repository into, then open the content in a code text editor. You should now see the main files for this project (index.js, generateMarkdown.js, and README.md).
-3. Next check to see if you have node.js installed on your machine by running the command *node -v* in your command line
-4. If you have node.js make sure your version is up to date by going to this website (https://nodejs.org/en/)
-5. If you do not have node.js installed follow the installation steps on this website (https://nodejs.org/en/)
-6. Once you have node.js installed, make sure you are still in the readme generator directory in the command line, and then run the following command *npm init* to initialize this application with npm and a package.json file
-7. After you have node.js and your npm initialized, you will need to install the *inquirer* package from npm in order to run this application. You can install this package using the command *npm install inquirer*
-8. Now that everything has been properly installed and initialized, you are ready to run the application via node.js using the command line.
+3. Next check to see if you have node.js installed on your machine by running the command *node -v* in your command line.
+4. If you have node.js make sure your version is up to date by going to this website (https://nodejs.org/en/).
+5. If you do not have node.js installed follow the installation steps on this website (https://nodejs.org/en/).
+6. Once you have node.js installed, make sure you are still in the readme generator directory in the command line, and then run the following command *npm install* to install the required package and dependencies to run the application.
+7. After you have node.js and the required npm dependencies installed, you are ready to run the application via node.js using the command line.
 
 ## Usage
 To use the readme generator application complete the following steps:
@@ -60,7 +59,7 @@ To use the readme generator application complete the following steps:
 
 MIT License
 
-Copyright (c) 2021 Sammi Moore
+Copyright (c) 2022 Sammi Moore
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
