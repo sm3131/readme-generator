@@ -1,4 +1,3 @@
-// TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
 const markdown = require('./utils/generateMarkdown.js');
@@ -6,7 +5,6 @@ const markdown = require('./utils/generateMarkdown.js');
 const d = new Date();
 const currentYear = d.getFullYear();
 
-// TODO: Create an array of questions for user input
 const questions = () => {
     return inquirer.prompt([
     {
@@ -161,7 +159,6 @@ const questions = () => {
 
 questions()
 .then(readmeData => {
-    console.log(readmeData);
     return markdown(readmeData);
 })
 .then(readmeMD => {
