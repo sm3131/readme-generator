@@ -32,6 +32,10 @@ If you would like to access the code for this application, please visit [GitHub]
 ## Preview
 
 Click on the link below to watch the Screencastify video that walks the user through proper usage of the application:
+https://watch.screencastify.com/v/duCHOjgxhP80jPq7YecP
+
+Example README.md file generated using this application:
+![NEW_README.md](./utils/images/example_README.png)
 
 ## Installation
 To install the README generator application complete the following steps:
